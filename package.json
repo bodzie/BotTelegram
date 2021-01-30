@@ -1,0 +1,13 @@
+{
+  "name": "telegraph-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Bhdn <novikovbohdan@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "telegraf": "^4.0.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
