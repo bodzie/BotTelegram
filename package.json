@@ -1,5 +1,5 @@
 {
-  "name": "telegraph-bot",
+  "name": "bot",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Bhdn <novikovbohdan@gmail.com>",
@@ -9,7 +9,8 @@
   },
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "deploy": "git push dokku@int1.kaido.team:bot master:master"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
