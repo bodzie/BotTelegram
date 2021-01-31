@@ -11,7 +11,7 @@
   },
   "scripts": {
     "build": "tsc -w",
-    "start": "node index.js",
+    "start": "node build/index.js",
     "dev": "nodemon build/index.js",
     "deploy": "git push dokku@int1.kaido.team:bot master:master"
   },
