@@ -9,7 +9,7 @@ const botToken = process.env.BOT_TOKEN;
 
 const bot = new Telegraf(botToken);
 
-bot.telegram.getMe().then(console.log);
+bot.telegram.getMe().then(consola.info);
 
 let startMsg: any;
 bot.start((ctx: any) => {
