@@ -1,6 +1,6 @@
 {
   "name": "bot",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "index.js",
   "author": "Bhdn <novikovbohdan@gmail.com>",
   "license": "MIT",
@@ -10,7 +10,8 @@
     "telegraf": "^4.0.0"
   },
   "scripts": {
-    "build": "tsc -w",
+    "dev:build": "tsc -w",
+    "build": "echo 'skip build'",
     "start": "node build/index.js",
     "dev": "nodemon build/index.js",
     "deploy": "git push dokku@int1.kaido.team:bot master:master"
