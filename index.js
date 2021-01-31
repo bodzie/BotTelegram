@@ -1,9 +1,11 @@
+require('dotenv').config()
+
 console.log('hello');
 // console.log(require('telegraf'))
 
 const {Telegraf} = require('telegraf')
 
-const botToken = '1535989556:AAEZRrvit0NvnW-hYieGf59JTYyPg4Q7D8A'
+const botToken = process.env.BOT_TOKEN
 
 const bot = new Telegraf(botToken)
 
