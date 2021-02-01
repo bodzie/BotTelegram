@@ -6,5 +6,7 @@ app.get("/", function (req, res) {
     consola.info(res, res);
     res.send('hello dynamic ' + Math.random());
 });
-app.listen(5000, 'localhost', function () { return consola.info('listening on 5000'); });
+var host = '0.0.0.0';
+var port = 5000;
+app.listen(port, host, function () { return consola.info("listening on " + host + ":" + port); });
 module.exports = { app: app };
