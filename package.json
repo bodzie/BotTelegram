@@ -1,19 +1,22 @@
 {
   "name": "bot",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "index.js",
   "author": "Bhdn <novikovbohdan@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "consola": "^2.15.0",
     "dotenv": "^8.2.0",
+    "express": "^4.17.1",
     "telegraf": "^4.0.0"
   },
   "scripts": {
     "dev:build": "tsc -w",
     "build": "echo 'skip build'",
-    "start": "node build/index.js",
-    "dev": "nodemon build/index.js",
+    "bot": "node build/bot.js",
+    "dev:bot": "nodemon build/bot.js",
+    "web": "node build/web.js",
+    "dev:web": "nodemon build/web.js",
     "deploy": "git push dokku@int1.kaido.team:bot master:master"
   },
   "devDependencies": {
