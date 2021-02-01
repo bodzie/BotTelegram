@@ -10,8 +10,6 @@ var Telegraf = require("telegraf").Telegraf;
 var botToken = process.env.BOT_TOKEN;
 var bot = new Telegraf(botToken);
 bot.telegram.getMe().then(consola_1.default.info);
-Math.random();
-consola_1.default.info(window);
 var startMsg;
 bot.start(function (ctx) {
     if (startMsg)

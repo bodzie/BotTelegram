@@ -10,9 +10,6 @@ const botToken = process.env.BOT_TOKEN;
 const bot = new Telegraf(botToken);
 
 bot.telegram.getMe().then(consola.info);
-Math.random()
-
-consola.info(window)
 
 let startMsg: any;
 bot.start((ctx: any) => {
