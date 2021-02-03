@@ -20,5 +20,5 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.app = void 0;
-var app = __importStar(require("./web.js"));
+const app = __importStar(require("./web.js"));
 exports.app = app;

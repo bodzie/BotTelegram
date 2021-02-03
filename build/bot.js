@@ -4,25 +4,25 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 require("dotenv").config();
-var consola_1 = __importDefault(require("consola"));
+const consola_1 = __importDefault(require("consola"));
 console.log("hello");
-var Telegraf = require("telegraf").Telegraf;
-var botToken = process.env.BOT_TOKEN;
-var bot = new Telegraf(botToken);
+const { Telegraf } = require("telegraf");
+const botToken = process.env.BOT_TOKEN;
+const bot = new Telegraf(botToken);
 bot.telegram.getMe().then(consola_1.default.info);
-var startMsg;
-bot.start(function (ctx) {
+let startMsg;
+bot.start((ctx) => {
     if (startMsg)
         bot.telegram.sendCopy(ctx.chat.id, startMsg);
     else
         ctx.reply("hey there\n\n/set_start");
 });
-bot.command("set_start", function (ctx) {
-    var reply_to_message = ctx.message.reply_to_message;
+bot.command("set_start", (ctx) => {
+    const { reply_to_message } = ctx.message;
     if (!reply_to_message)
         ctx.reply("Reply /set_start on desired start message");
     startMsg = reply_to_message;
 });
-bot.help(function (ctx) { return ctx.reply("Send me a sticker"); });
-bot.on("sticker", function (ctx) { return ctx.reply("👍"); });
+bot.help((ctx) => ctx.reply("Send me a sticker"));
+bot.on("sticker", (ctx) => ctx.reply("👍"));
 bot.launch();
