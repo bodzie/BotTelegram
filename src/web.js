@@ -8,7 +8,6 @@ app.get("/", (req, res) => {
   res.send("hello dynamic " + Math.random());
 });
 
-// consolu;
 const host = "0.0.0.0";
 const port = 5000;
 

@@ -6,9 +6,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 require("dotenv").config();
 const consola_1 = __importDefault(require("consola"));
 console.log("hello");
-const { Telegraf } = require("telegraf");
+const telegraf_1 = require("telegraf");
 const botToken = process.env.BOT_TOKEN;
-const bot = new Telegraf(botToken);
+if (!botToken)
+    throw new Error("missing BOT_TOKEN");
+const bot = new telegraf_1.Telegraf(botToken);
 bot.telegram.getMe().then(consola_1.default.info);
 let startMsg;
 bot.start((ctx) => {
@@ -26,3 +28,4 @@ bot.command("set_start", (ctx) => {
 bot.help((ctx) => ctx.reply("Send me a sticker"));
 bot.on("sticker", (ctx) => ctx.reply("👍"));
 bot.launch();
+//# sourceMappingURL=bot.js.map

@@ -6,8 +6,8 @@ app.get("/", (req, res) => {
     consola.info(res, res);
     res.send("hello dynamic " + Math.random());
 });
-// consolu;
 const host = "0.0.0.0";
 const port = 5000;
 app.listen(port, host, () => consola.info(`listening on ${host}:${port}`));
 module.exports = { app };
+//# sourceMappingURL=web.js.map

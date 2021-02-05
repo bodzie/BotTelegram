@@ -3,9 +3,10 @@ import consola from "consola";
 
 console.log("hello");
 
-const { Telegraf } = require("telegraf");
+import { Telegraf } from "telegraf";
 
 const botToken = process.env.BOT_TOKEN;
+if (!botToken) throw new Error("missing BOT_TOKEN")
 
 const bot = new Telegraf(botToken);
 
